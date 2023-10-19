@@ -1,7 +1,7 @@
 name: Schedule wk
 on:
     schedule:
-      - cron: 14 16 * * *
+      - cron: 16 16 * * *
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
