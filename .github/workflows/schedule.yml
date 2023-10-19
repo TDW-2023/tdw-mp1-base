@@ -1,12 +1,15 @@
-name: Schedule wk
+name: schedule
+
 on:
   push:
-    branches: [main]
+    branches:
+      - dev
   schedule:
-    - cron: 55 16 * * *
+    - cron: '*/5 * * * *'
+
 jobs:
-  Explore-GitHub-Actions:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - run: echo "Workflow automático - 16:55h"
+      - uses: actions/checkout@v2
+      - run: echo "olá"
