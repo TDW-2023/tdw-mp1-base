@@ -4,7 +4,7 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-     - uses: actions/checkout@v4  
-     - run: npm ci
-     - run: npm lint
-     - run: npm format
+      - uses: actions/checkout@v4
+      - run: npm ci
+      - run: npm lint
+      - run: npm format
