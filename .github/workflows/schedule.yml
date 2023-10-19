@@ -1,14 +1,10 @@
 name: Schedule
 on:
-    push:
-        branches: 
-            - dev
     schedule:
-      - cron: 0 17 19 10 *
+      - cron: 14 16 * * *
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
      - uses: actions/checkout@v4  
-     - run: npm ci
      - run: echo "Workflow automático - 00:00h"
