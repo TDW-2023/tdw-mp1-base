@@ -1,7 +1,9 @@
 name: Schedule wk
 on:
+    pull_request: 
+        branches: [main]
     schedule:
-      - cron: 16 16 * * *
+      - cron: 21 16 * * *
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
