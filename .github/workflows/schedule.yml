@@ -5,11 +5,11 @@ on:
     branches:
       - dev
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '09 17 * * *'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: echo "olá"
+      - run: echo "atualiza às 18:09h"
