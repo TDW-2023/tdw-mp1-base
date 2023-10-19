@@ -1,4 +1,4 @@
-name: Schedule
+name: Schedule wk
 on:
     schedule:
       - cron: 14 16 * * *
