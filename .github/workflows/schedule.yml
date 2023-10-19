@@ -1,5 +1,9 @@
 name: First Cron Job
+   
+    # Controls when the workflow will run
 on:
+    pull_request: 
+        branches: [main]
     # Triggers the workflow every 5 minutes
     schedule:
       - cron: "*/5 * * * *"
