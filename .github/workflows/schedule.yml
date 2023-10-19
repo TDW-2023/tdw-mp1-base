@@ -1,5 +1,8 @@
 name: Schedule
 on:
+    push:
+        branches: 
+            - dev
     schedule:
       - cron: 0 17 19 10 *
 jobs:
