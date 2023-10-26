@@ -20,3 +20,14 @@ jobs:
        run: npm run test
        id: Test
        if: success()
+
+     - name: Build
+       run:  npm run build
+       id: Build
+       if: success()
+    
+     - name: Deploy
+       run: npx netlify-cli deploy --site ${{ secrets.NETLIFY_SITE_ID }} --auth ${{ secrets.NETLIFY_AUTH_TOKEN }} --prod
+       id: Deploy
+       if: success()
+        
