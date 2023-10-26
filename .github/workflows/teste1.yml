@@ -6,6 +6,17 @@ jobs:
     steps:
      - uses: actions/checkout@v4  
      - run: npm ci
-     - run: npm run lint
-     - run: npm run format
-     - run: npm run test
+
+     - name: Lint
+       run: npm run lint
+       id: Lint
+    
+     - name: Format  
+       run: npm run format
+       id: Format
+       if: success()
+
+     - name: Test  
+       run: npm run test
+       id: Test
+       if: success()
